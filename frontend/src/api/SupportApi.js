@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-export const getData = () => axios.get("http://localhost:4000/api/getdata").then(res => res.json())
+export const getData = () => axios.get("https://covid19infoboard.herokuapp.com/api/getdata").then(res => res.json())
 
 export const createData = (data) =>{
-fetch("http://localhost:4000/api/create", {
+fetch("https://covid19infoboard.herokuapp.com/api/create", {
   method: "POST",
   headers: {
     "Accept": "application/json",
