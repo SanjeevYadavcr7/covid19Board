@@ -1,0 +1,37 @@
+.ChartBox{width: 100%;height:83%;border-radius: 20px;margin:0;
+border:1px solid whitesmoke;}
+.ChartBox .small-text{display: flex;justify-content: space-between;
+align-items: center;}
+.ChartBox .ChartBox_toggle{display:flex;margin:2% 0% 1% 0%;
+align-items: center;justify-content: space-between;}
+.ChartBox .small-text{font-size:0.8em;letter-spacing:0.05em;
+    font-weight:700;margin:0;color:#666;margin-left:2%;}
+.actualChartbox{width: 100%;height: 70%;border:1px solid transparent;
+margin: 0% auto;position: relative;}
+.chartjsLegend li span {display: inline-block;width: 12px;height: 12px;
+    margin-right: 5px;border-radius: 25px;}
+
+@media only screen and (min-width: 960px) and (max-width: 1300px){
+    .ChartComp{width: 85%;border: 1px solid transparent;padding: 0;}
+    .actualChartbox, .ChartBox, .actualChartbox{border:1px solid transparent;}
+    .Chart.defaults.layout{
+        padding: 0px 0px 0px 0px;
+    }
+    .ChartBox{border: 1px solid transparent;height:85%;padding: 0;
+        /* display: none; */
+        margin: 2% auto;width:95%;
+    }
+    .ChartBox .small-text{margin:0;}
+
+}
+
+
+@media only screen and (max-width:600px) {
+
+.Chart.defaults.layout{padding: 0px 0px 0px 0px;}
+.ChartComp{border:none;padding: 0;height: 290px;}
+.ChartBox{border:none;border-radius:inherit;
+    padding: 0;}
+.ChartBox .small-text{margin:3% 3%;}
+
+}
