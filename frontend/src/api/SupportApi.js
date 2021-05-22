@@ -10,7 +10,7 @@ fetch("https://covid19infoboard.herokuapp.com/api/create", {
     "Content-Type": "application/json"
   },
   body: JSON.stringify(data)
-}
-)
+}).then((res) => {return res.json()})
+.catch((error) => {return 'error'})
 console.log('Inside Create Data')
 }

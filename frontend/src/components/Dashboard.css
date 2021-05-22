@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;500;600;700;900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&display=swap');
 * {-webkit-tap-highlight-color: transparent;}
 body{margin:0;padding:0;box-sizing: border-box;font-family:'Lato',sans-serif;}
@@ -7,7 +7,7 @@ body{-ms-overflow-style: none; scrollbar-width: none;}
 button:hover{cursor: pointer;}
 .box{width: 100%;height:100vh;border:0px solid transparent;}
 .box .box_l{width: 15%;height:99%;border-right: 1px solid transparent;float:left}
-.box .box_m{width: 64%;height:99%;border: 1px solid white;float:left}
+.box .box_m{width: 64%;height:99%;border: 1px solid white;float:left;}
 .box .box_r{width: 20%;height:99%;border: 1px solid transparent;float:left}
 
 /* Nav Bar styling  */
@@ -127,8 +127,10 @@ font-size:0.8em;}
 .support_search .searchBox .search_float .labels{max-width:25%;display:flex;
     align-items:center;
     border:1px solid rgb(206, 201, 201);padding:0.5em 0.7em;
-    border-radius:3px;background-color: #fff;
-}
+    border-radius:3px;background-color: #fff;}
+.support_search .searchBox .statusTable table{width:100%;height:auto}
+/* .support_search .searchBox .statusTable table tr{max-height:10px;width:120%;max-height:5px;} */
+
 .support_search .searchBox .search_float .labels:hover,
 .support_search .searchBox .search_float .labels label:hover{cursor: pointer;}
 .support_search .searchBox .search_float .labels label{
@@ -167,15 +169,46 @@ th{background-color: #fff;border-bottom:1px solid rgb(236, 236, 236);}
 tr:nth-child(even){background-color: rgba(236, 236, 236, 0.397);}
 tr:nth-child(odd){background-color:#fff;}
 td:first-child{background-color: rgba(236, 236, 236, 0.397);}
-tbody{
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
+tbody{height: 100%;overflow-x: hidden;overflow-y: auto;}
 .statusTable{ overflow: auto; height: 100%; }
-.statusTable th{ position: sticky; top: 0; }
+.statusTable th{ position: sticky; top: 0;}
 tr:hover{cursor: pointer;background-color: #f0f0f0;}
+.statusTable table{width:100%;height:auto}
+.statusTable table tr{max-height:10px;width:120%;max-height:5px;}
 
+.box_m .afterSupport{position:absolute;left:85%;top:2%;
+display:flex;align-items: center;justify-content: center;
+font-size:0.75em;font-family:'Century Gothic';font-weight:500;
+letter-spacing:0.06em;color:#fff;
+background-image:linear-gradient(to right,#2e77ff,#005bd3 );
+border:1px solid #005bd3;border-radius:4px;
+box-shadow: 0px 15px 30px 0px #005bd3a9;
+width:15%;padding:1em 1em;
+display: none;
+}
+.box_m .afterSupport img{width:7%;padding:0;margin:0;margin-left:2%;}
+.box_m .notify{
+    position:absolute;left:105%;top:2%;
+    display:flex;align-items: center;justify-content: center;
+    font-size:0.75em;font-family:'Century Gothic';font-weight:500;
+    letter-spacing:0.06em;color:#fff;
+    background-image:linear-gradient(to right,#2e77ff,#005bd3 );
+    border:1px solid #005bd3;border-radius:4px;
+    box-shadow: 0px 15px 30px 0px #005bd3a9;
+    width:15%;padding:1em 1em;
+    animation-name: buttonAnimation;animation-duration:2s;
+    animation-timing-function: ease-in-out;
+}
+.box_m .notify img{width:7%;padding:0;margin:0;margin-left:2%;}
+
+
+@keyframes buttonAnimation{
+    0%{left:100%;}
+    40%{left:70%;}
+    60%{left:70%;}
+    80%{left:70%;}
+    100%{left:100%;}
+}
 
 
 
@@ -327,18 +360,13 @@ display: flex;justify-content: center;align-items: center;}
 
 /* Footer Page  */
 .footer_box{width: 100%;text-align: center;}
-.footers{width: 100%;height: auto;
-border:1px solid rgb(224, 224, 224);
-}
-.footers .footer_text{
-    display: flex;align-items: center;justify-content: center;
+.footers{width: 100%;height: auto;border:1px solid rgb(224, 224, 224);}
+.footers .footer_text{display: flex;align-items: center;justify-content: center;
     font-weight: normal;font-size:0.8em;color:#222;
-    font-family: 'Lato',sans-serif;letter-spacing:0.1em;
-}
+    font-family: 'Lato',sans-serif;letter-spacing:0.1em;}
 .footers .footer_text img{width:1.2%;margin-right:0.5%;}
 .footers .phantom{font-weight: bold;font-size:0.8em;margin-top:-0.4%;
-    font-family: 'Lato',sans-serif;color: rgb(252, 39, 39);
-letter-spacing:0.2em;}
+    font-family: 'Lato',sans-serif;color: rgb(252, 39, 39);letter-spacing:0.2em;}
 
 
 /* Vaccine Page  */
@@ -460,8 +488,7 @@ justify-content: center;}
 .symptomBox .iconsBox{width: 50%;height:70%;}
 .box_m_1 .que{font-size:0.85em;}
 
-/* Support page  */
-
+/* Vaccine page  */
 .box_m_1 .banner_support{height: auto;}
 .box_m_1 .form_support{height: 67%;margin: 1% auto;}
 .form_support form button{font-size: 0.7em;margin-top:3%;}
@@ -470,8 +497,27 @@ justify-content: center;}
 .form_support .avail_center .statusTable .tableBox thead th{font-size:0.8em;}
 .form_support .avail_center .statusTable tr td:first-child,
 .form_support .avail_center .statusTable tr td{font-size:0.7em;}
-
 .newsBox_link{margin-top:-2.8%;}
+
+
+/* Support Page  */
+
+.box_m_1 .support_search{width:88%;min-height:70%;}
+.support_search .head-text{margin:0;margin-top:2%;font-size:1.1em;}
+.support_search .searchBox{width:99%;margin:1% auto;}
+.searchBox .notice{font-size:0.75em;margin-top:4%;}
+.support_search .searchInputBox{max-width:23%;}
+.support_search .searchInputBox img{width:7%;}
+.support_search .searchBox .search_float .pickOptions{min-width:75%;}
+.support_search .searchBox .search_float .labels{padding: 0.4em 0.6em;font-size:1em;}
+.support_search .searchBox .search_float .labels label{margin:5%;}
+.support_search .searchBox .statusTable{min-height:290px;border-radius:8px;}
+.support_search .searchBox .statusTable table th{letter-spacing:0.04em;font-weight:500;
+    font-size:0.8em;text-transform:uppercase;}
+.box_m .afterSupport, .box_m .notify{font-size:0.75em;width:19%;}
+/* .support_search .searchBox .statusTable table{width:100%;height:auto}
+.support_search .searchBox .statusTable table tr{max-height:10px;width:120%;max-height:5px;
+border-bottom:1px solid red;} */
 
 }
 
@@ -479,7 +525,6 @@ justify-content: center;}
 /* ///////////////////// -->for mobile phones<-- ////////////////// */
 
 @media only screen and (max-width:600px) {
-
 body{width: 100%;height: auto;}
 .logoLink{border: none;font-weight: normal;margin-left:2%;}
 .box{width: 100%;height: 100%;display: flex;flex-direction: column;}
@@ -553,11 +598,14 @@ th, td{font-size: 0.8em;color: #555;}
 /* Support Page  */
 /* .box_m_support .banner img{margin-left:-5%;} */
 .box_m_1 .support_search{width:100%;}
-.support_search .head-text{font-size:1em;margin-left:3%;}
+.support_search .head-text{font-size:0.78em;font-weight:500;margin-top: 2%;
+    text-transform: uppercase;letter-spacing:0.05em;text-align: center;}
 /* .support_search .searchBox{border:1px solid;} */
 .support_search .searchBox .search_float{
     flex-direction: column;justify-content: center;align-items: center;}
 .support_search .searchInputBox{min-width:98%;max-width:98%;}
+.support_search .searchInputBox input{text-transform: uppercase;font-size:0.65em;transition:1s;}
+.support_search .searchInputBox input:focus{font-weight:500;letter-spacing:0.2em;}
 .support_search .searchBox .search_float .pickOptions{max-width:100%;flex-wrap: wrap;}
 .support_search .searchBox .search_float .labels{
 font-size:0.9em;min-width:30%;padding:0.6em 0.1em;margin:0;
@@ -566,6 +614,25 @@ margin-top:2%;align-items: center;justify-content:center;}
 .support_search .searchBox .statusTable{width:98%;margin:2% auto;}
 .support_search .searchBox .statusTable table td{font-size:0.7em;}
 .support_search .searchBox .statusTable table th span{display: none;}
+.support_search .searchBox .statusTable table th{text-transform: uppercase;
+font-weight:500;font-size:0.7em;letter-spacing:0.09em;}
+.box_m .notify{
+    top:140%;left:105%;width:60%;
+    padding:0.9em 0em;font-size:0.7em;
+    background-image: linear-gradient(to right, rgb(224, 5, 5), red);
+    box-shadow: 0px 15px 30px 0px red;
+    border:none;
+    animation-name:buttonAnimation2;
+}
+.box_m .notify img{width:5.5%;}
+@keyframes buttonAnimation2{
+    0%{left:100%;}
+    40%{left:20%;}
+    60%{left:20%;}
+    80%{left:20%;}
+    100%{left:100%;}
+}
+
 
 
 /* news page  */

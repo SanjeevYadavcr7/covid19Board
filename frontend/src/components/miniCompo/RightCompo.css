@@ -127,8 +127,17 @@ padding-right:1em;padding-left: 1em;}
 /* //////////////////////--> SupportRight Component <--///////////////////////// */
 
 .SupportRight{width:100%;height:100%;border:1px solid transparent;display:flex;flex-direction:column;}
-.SupportRight .head-text{color:#555;font-size:1.1em;letter-spacing:0.02em;
-  font-family: 'Roboto',sans-serif;font-weight:600;margin-top:12%;}
+.SupportRight .head-text{color:#555;font-size:0.8em;
+  letter-spacing:0.05em;font-family: 'Roboto',sans-serif;
+  margin-top:12%;border-radius:3px;color:#fff;
+  display:flex;align-items: center;
+  justify-content: space-evenly;
+  width:83%;font-weight:500;text-transform:uppercase;
+  padding:0.7em 0em 0.7em 0em;
+  background-image:linear-gradient(to top right,#005bd3,#2e77ff );
+  /* border:1px solid #0b72f8; */
+}
+.SupportRight .head-text img{width:5%;margin-left:2%;}
 .SupportRight .support_form{width:85%;height:auto;border:1px solid transparent;
   border-bottom:1px solid lightgray;margin-left:5%;}
 .SupportRight .support_form form label{font-family:'Lato',sans-serif;font-size:0.8em;
@@ -152,17 +161,31 @@ margin-left:10%;}
 .SupportRight .support_form form input[name="notListed"]{width:90%;}
 .SupportRight .support_form form input[name="notListed"]::placeholder{color:rgb(156, 154, 154);}
 .SupportRight .support_form form button{width:60%;height:35px;font-family:'Roboto';
-background-color:#007EC5;border-radius:3px;
-border:1px solid #007EC5;color:#fff;text-transform:uppercase;
+background-color:#005bd3;border-radius:3px;
+background-image:linear-gradient(to top right,#005bd3,#2e77ff );
+border:1px solid #005bd3;color:#fff;
 letter-spacing:0.1em;font-size:0.75em;margin:10% auto;
-display:flex;justify-content: center;align-items: center;}
-.SupportRight .support_form form button img{width:10%;margin-left:4%;}
+display:flex;justify-content: center;align-items: center;
+font-weight:500;font-family:'Century Gothic';
+transition: 0.32s;
+}
+.SupportRight .support_form form button:hover{box-shadow: 0px 15px 20px -3px #005bd3a9;}
+.SupportRight .support_form form button img{
+  width:10%;margin-left:4%;
+  /* animation-name:buttonA;
+animation-duration:0.7s;
+animation-timing-function: linear;
+animation-iteration-count: infinite; */
+}
+@keyframes buttonA{ 0%{width: 8%;} 50%{width:12%;} 100%{width:8%;}}
+
+
 .SupportRight a{border:1px solid;width:74%;max-width: 74%;min-height:25px;font-size:0.8em;margin:2% auto;
 margin-top:5%;color:#fff;font-weight:400;
 font-family: 'Roboto',sans-serif;}
 .SupportRight a img{width:10%;margin-right:3%;}
 .SupportRight .vaccine_link{
-  background-image:linear-gradient(to bottom right,rgba(9, 224, 108, 0.82),rgba(9, 255, 0, 0.84));
+  background-image:linear-gradient(to right,rgba(9, 224, 108, 0.82),rgba(9, 255, 0, 0.84));
   border:1px solid rgba(44, 248, 88, 0.623);
   border-radius: 4px;}
 .SupportRight .status_link{
@@ -181,6 +204,19 @@ font-family: 'Roboto',sans-serif;}
 .numBox1, .numBox2, .numBox3{width: 85%;}
 .p11{font-size: 0.9em;}.p01{font-size:1em;}
 .p001{margin-left:-2%;font-size: 0.8em;}.p12{font-size: 1.2em;}
+
+/* Support Page  */
+.SupportRight .head-text{font-weight:500;font-size:0.69em;}
+.SupportRight .head-text img{width:4%;}
+.SupportRight .support_form form label{font-weight:600;color:#444;}
+.SupportRight .support_form form .labels{font-size:0.9em;width:29%;}
+.SupportRight .support_form form .labels label{margin-left:5%;}
+.SupportRight .status_link{display:none;}
+.SupportRight .support_form form button{width:50%;font-size:0.7em;border-radius:2px;
+  border:1px solid #005bd3;background-color:#005bd3;font-weight:500;}
+.SupportRight .support_form form button img{width:13%;}
+.SupportRight .vaccine_link{font-size:0.7em;}
+.SupportRight .vaccine_link img{width:9%;}
 }
 
 @media only screen and (max-width:600px) {
@@ -233,6 +269,27 @@ display: flex;flex-direction:row;justify-content: space-around;}
 .SupportRight .support_form form button{width:40%;margin:0% auto;margin-bottom:5%;}
 .SupportRight .support_form form button img{width:12%;}
 .SupportRight a{display:none;}
+.SupportRight .support_form form input:focus{border:1px solid #0970f7;}
+.SupportRight .head-text{
+  display:flex;align-items: center;justify-content: center;
+  font-size:0.75em;font-family:'Century Gothic';font-weight:500;letter-spacing:0.06em;color:#fff;
+  background-image:linear-gradient(to right,#2e77ff,#005bd3 );
+  border:1px solid #005bd3;border-radius:4px;box-shadow: 0px 10px 20px -20px #005bd3a9;
+  width:90%;padding:0.8em 1em;margin: 0% auto;margin-bottom:4%;}
+.SupportRight .head-text img{width:4%;}
+.SupportRight .support_form form input:focus{color:#0970f7;
+  letter-spacing:0.2em;font-weight:500;}
+.SupportRight .support_form form input, .SupportRight .support_form form label{
+  text-transform: uppercase;font-weight:500;
+  font-size:0.65em;font-family:'Roboto';
+letter-spacing:0.05em;}
+.SupportRight .support_form form input{font-weight:400;letter-spacing:0.02em;}
+.SupportRight .support_form form button{box-shadow: 0px 15px 15px -6px #005bd37a;}
+
+
+
+
+
 }
 
 

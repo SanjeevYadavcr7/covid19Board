@@ -86,7 +86,7 @@ function SupportSearchCompo(props) {
 
     return (
         <div className="statusTable">
-            <table className="tableBox">
+            <table>
                 <thead>
                     <tr>
                         <th>Helper<span>s' Name</span></th>

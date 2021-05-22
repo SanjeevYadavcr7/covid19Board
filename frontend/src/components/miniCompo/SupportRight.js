@@ -4,6 +4,7 @@ import './RightCompo.css';
 import injection from '../images/injection.svg';
 import globe from '../images/globe.svg';
 import heart from '../images/heart2.svg'
+import arrow from '../images/arrow.svg'
 
 
 function SupportRight(props) {
@@ -23,7 +24,6 @@ function SupportRight(props) {
 
     function submitHandler(e){
         e.preventDefault();
-        // console.log("Help = "+help);
         const data = {name,city,pin,phone,help: help.toString()};
         props.onSubmit(data);
         e.target.reset();
@@ -34,7 +34,7 @@ function SupportRight(props) {
 
     return (
         <div className="SupportRight">
-            <p className="head-text">Want to help, Support now!</p>
+            <p className="head-text">Want to help, Support now <img src={arrow} alt="arrow-down" /></p>
             <div className="support_form">
                 <form onSubmit={submitHandler}>
                     <label>What is your name?</label>

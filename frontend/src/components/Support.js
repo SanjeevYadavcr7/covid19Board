@@ -6,7 +6,9 @@ import CovidApi from '../api/CovidApi';
 import banner from './images/banner5.png';
 import RightCompo from './miniCompo/SupportRight';
 import CheckBox from './miniCompo/SupportCheckBox';
+import heart from './images/heart2.svg'
 import SupportSearchCompo from './miniCompo/SupportSearchCompo';
+import e from 'cors';
 
 
 function Support() {
@@ -14,6 +16,7 @@ function Support() {
     const [word, setWord] = useState('');
     const [city, setCity] = useState('');
     const [data, setData] = useState('');
+    const [flag,setFlag] = useState(false);
     const FormOptionsData = [{'id':1,'value':'Oxygen'},{'id':2,'value':'Medicine'},{'id':3,'value':'Hospital'},{'id':4,'value':'Vaccine'},{'id':5,'value':'Food'},{'id':6,'value':'Financial'}]
     const [Filters, setFilters] = useState({
         options:[],
@@ -25,12 +28,32 @@ function Support() {
     useEffect(() => {
         if(data !== ''){
             const onFetch = async(data) => {
-                await createData(data);
-                // console.log("Pushing Data");
+                console.log("Pushing Data");
+                // await createData(data);
+                const flag = await createData(data);
+                if(flag != 'error'){
+                    setFlag(true);
+                    console.log("Data is successfully pushed");
+                    const item = document.querySelector('#doneNotify');
+                    item.classList.remove('afterSupport');
+                    item.classList.add('notify');
+                }
+                else console.log("Unable to push data")
             }
             onFetch(data)
         }
     }, [data])
+
+    useEffect(() => {
+        if(flag){
+            setTimeout(() => {
+                const item = document.querySelector('#doneNotify');
+                item.classList.add('afterSupport');
+                item.classList.remove('notify');
+            },2000)
+        }
+    }
+    ,[flag])
 
     const getWord = (word) =>{ setWord(word);}
     const getCity = (city) => { setCity(city);}
@@ -49,6 +72,7 @@ function Support() {
     return (
         <>
         <div className="box_m">
+            <button className="afterSupport" id="doneNotify">Thank You! This means a lot<img src={heart} alt="heart"/></button>
             <div className="box_m_1 box_m_support">
                 <p className="dates">{CovidApi.getTodayDate()}<span>day</span></p>
                 <div className="banner"><img src={banner} alt="banner_image" /></div>
