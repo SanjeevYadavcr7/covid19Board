@@ -5,6 +5,7 @@ import china from '../images/images3.jpg';
 import vaccine from '../images/download.jfif';
 import hands from '../images/court.jfif';
 import crowd from '../images/images2.jpg';
+import heart from '../images/heart2.svg';
 
 function RightCompo() {
     return (
@@ -29,11 +30,15 @@ function RightCompo() {
                         <span className="small-text">Plasma helpline</span></p>
                     </div>
                 </div>
-                <div className="numBox">
+                <div className="numBox lastNumbox">
                     <div className="numBox_icon fourth"><p className="fourth-text">V</p></div>
                     <div className="numBox_num"><p>+91-9013151515<br/>
                         <span className="small-text">Vaccine helpline number</span></p>
                     </div>
+                </div>
+                <div className="numBox doSupport">
+                    <Link to="/support">I want to get/give help</Link>
+                    <img src={heart} alt="heart-svg" />
                 </div>
             </div>
             <div className="newsBox">

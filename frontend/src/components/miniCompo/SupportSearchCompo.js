@@ -25,7 +25,7 @@ function SupportSearchCompo(props) {
             for(let i=0;i<filterArray.length;i++){
                 if(filterArray[i] === 1){
                     checkedIn = 0;
-                    data.map((rowData) =>{
+                    data.forEach((rowData) =>{
                         let keyWord = "Oxygen";
                         if(rowData.help.toLowerCase().includes(keyWord.toLowerCase())){
                             if(!newData.includes(rowData)) newData = [...newData,rowData]
@@ -34,7 +34,7 @@ function SupportSearchCompo(props) {
                 }
                 else if(filterArray[i] === 2){
                     checkedIn = 0;
-                    data.map((rowData) =>{
+                    data.forEach((rowData) =>{
                         let keyWord = "Medicine";
                         if(rowData.help.toLowerCase().includes(keyWord.toLowerCase())){
                             if(!newData.includes(rowData)) newData = [...newData,rowData]
@@ -43,7 +43,7 @@ function SupportSearchCompo(props) {
                 }
                 else if(filterArray[i] === 3){
                     checkedIn = 0;
-                    data.map((rowData) =>{
+                    data.forEach((rowData) =>{
                         let keyWord = "Hospital";
                         if(rowData.help.toLowerCase().includes(keyWord.toLowerCase())){
                             if(!newData.includes(rowData)) newData = [...newData,rowData]
@@ -52,7 +52,7 @@ function SupportSearchCompo(props) {
                 }
                 else if(filterArray[i] === 4){
                     checkedIn = 0;
-                    data.map((rowData) =>{
+                    data.forEach((rowData) =>{
                         let keyWord = "Vaccine";
                         if(rowData.help.toLowerCase().includes(keyWord.toLowerCase())){
                             if(!newData.includes(rowData)) newData = [...newData,rowData]
@@ -61,7 +61,7 @@ function SupportSearchCompo(props) {
                 }
                 else if(filterArray[i] === 5){
                     checkedIn = 0;
-                    data.map((rowData) =>{
+                    data.forEach((rowData) =>{
                         let keyWord = "Food";
                         if(rowData.help.toLowerCase().includes(keyWord.toLowerCase())){
                             if(!newData.includes(rowData)) newData = [...newData,rowData]
@@ -70,7 +70,7 @@ function SupportSearchCompo(props) {
                 }
                 else if(filterArray[i] === 6){
                     checkedIn = 0;
-                    data.map((rowData) =>{
+                    data.forEach((rowData) =>{
                         let keyWord = "Financial";
                         if(rowData.help.toLowerCase().includes(keyWord.toLowerCase())){
                             if(!newData.includes(rowData)) newData = [...newData,rowData]
@@ -121,7 +121,13 @@ function SupportSearchCompo(props) {
                     }) :  
                         helperData.filter((rowData) => {
                             if(city === '')return rowData;
-                            else return rowData.city.toLowerCase().includes(city.toLowerCase())
+                            else{
+                                if(city[0] >= '0' && city[0] <= '9'){ 
+                                    let pincode = (rowData.pin).toString();
+                                    return pincode.includes(city);
+                                }
+                                else return rowData.city.toLowerCase().includes(city.toLowerCase());
+                                }
                         }).map((rowData, index) => {
                             return(
                             <tr key={rowData.name}>

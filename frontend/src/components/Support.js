@@ -8,7 +8,6 @@ import RightCompo from './miniCompo/SupportRight';
 import CheckBox from './miniCompo/SupportCheckBox';
 import heart from './images/heart2.svg'
 import SupportSearchCompo from './miniCompo/SupportSearchCompo';
-import e from 'cors';
 
 
 function Support() {
@@ -31,7 +30,7 @@ function Support() {
                 console.log("Pushing Data");
                 // await createData(data);
                 const flag = await createData(data);
-                if(flag != 'error'){
+                if(flag !== 'error'){
                     setFlag(true);
                     console.log("Data is successfully pushed");
                     const item = document.querySelector('#doneNotify');
@@ -62,9 +61,9 @@ function Support() {
         
         const newFilters = {...Filters};
         newFilters[category] = filters;
-        if(category === 'cities'){
+        // if(category === 'cities'){
             // do something to filter using cities
-        }
+        // }
         // showFilteredResults(newFilters);
         setFilters(newFilters); // setting filters state acc. to received filters 
     }
@@ -72,9 +71,9 @@ function Support() {
     return (
         <>
         <div className="box_m">
-            <button className="afterSupport" id="doneNotify">Thank You! This means a lot<img src={heart} alt="heart"/></button>
-            <div className="box_m_1 box_m_support">
-                <p className="dates">{CovidApi.getTodayDate()}<span>day</span></p>
+            <div className="box_m_1">
+                <button className="afterSupport" id="doneNotify">Thank You! This means a lot<img src={heart} alt="heart"/></button>
+                <p className="dates dates_support">{CovidApi.getTodayDate()}<span>day</span></p>
                 <div className="banner"><img src={banner} alt="banner_image" /></div>
                 <div className="support_search">
                     <p className="head-text">Looking for help! Search here....</p>

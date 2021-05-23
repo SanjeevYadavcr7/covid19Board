@@ -17,7 +17,6 @@ import home from './components/images/home.png';
 import news from './components/images/news.png';
 import status from './components/images/status.png';
 import support from './components/images/support.png';
-// import about from './components/images/about.png';
 import vaccine from './components/images/injection.png';
 import logoImg from './components/images/healthcare.png';
 

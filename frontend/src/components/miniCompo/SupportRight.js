@@ -49,7 +49,15 @@ function SupportRight(props) {
                     {props.optionsData.map((row) => {
                             return(
                                 <div className="labels" key={row.id}>
-                                    <input type="checkbox" name={`choice${row.id}`} value={row.value} onChange={(e) => {setHelp([...help,e.target.value])}}/>
+                                    <input type="checkbox" name={`choice${row.id}`} value={row.value} onChange={
+                                        (e) => {
+                                            if(help.includes(e.target.value)){
+                                                const index = help.indexOf(e.target.value);
+                                                if(index>-1) help.splice(index,1);
+                                            }
+                                            else setHelp([...help,e.target.value])
+                                            console.log("Help = "+help);
+                                        }}/>
                                     <label>{row.value}</label>
                                 </div>
                             )

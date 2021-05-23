@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 export const getData = () => fetch("https://covid19infoboard.herokuapp.com/api/getdata").then(res => res.json())
 
 export const createData = (data) =>{

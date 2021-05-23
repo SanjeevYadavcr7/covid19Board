@@ -1,15 +1,25 @@
 .RightCompo{width: 100%;height: 100%;display: flex;
-    flex-direction: column;justify-content:space-evenly;
-    align-items: center;}
+    flex-direction: column;justify-content:space-evenly;align-items: center;}
 .helplineBox{width: 90%;height: 45%;border:1px solid transparent;}
 .newsBox{width: 90%;height: 50%;border:1px solid transparent;}
-.head-text{color: #555;font-weight:600;margin-left:5%;
-    font-size:0.9em;letter-spacing: 0.02em;}
-.numBox{border:1px solid transparent;display: flex;flex-direction: row;
-    justify-content: space-evenly;align-items: center;}
+.head-text{color: #555;font-weight:600;margin-left:5%;font-size:0.9em;letter-spacing: 0.02em;}
+.numBox{border:none;display: flex;flex-direction: row;justify-content: space-evenly;align-items: center;}
+
+/* styling get/give help button  */
+.helplineBox .doSupport{
+width:87%;padding:1em 0em;height:10px;border-radius:3px;
+background-image: linear-gradient(to right, rgb(236, 61, 55), rgb(226, 26, 26));
+box-shadow: 0px 10px 20px -5px rgb(255, 0, 0);
+letter-spacing:0.08em;text-transform: uppercase;
+margin:3% auto;margin-left:5%;justify-content: center;}
+.helplineBox .doSupport a{margin:0;color:#fff;transition:0.7s;font-family:'Century Gothic';font-weight:500;font-size:0.7em;}
+.helplineBox .doSupport a:hover, .doSupport:hover{cursor: pointer;letter-spacing:0.12em;}
+.helplineBox .doSupport img{width:5.5%;margin-left: 3%;animation-name:heartBeat;animation-duration:0.64s;animation-timing-function: ease-in;animation-iteration-count: infinite;}
+@keyframes heartBeat{ 0%{width: 4.5%;} 50%{width:7.5%;} 100%{width:4.5%;}}
+/* styling get/give help button ends*/
+
 .numBox_icon{border: 1px solid rgb(69, 187, 255);width: 15%;height: 40px;
-    border-radius: 10px;background-color:rgba(69, 188, 255, 0.06);
-}
+  border-radius: 10px;background-color:rgba(69, 188, 255, 0.06);}
 .numBox_icon p{margin: 23% 35%;padding: 0;font-weight: bold;
     color:rgb(69, 187, 255);}
 .numBox_num{border:1px solid transparent;width: 65%;}
@@ -25,12 +35,10 @@
 
 .newsBox{border:1px solid transparent;overflow: auto;}
 .newsBox::-webkit-scrollbar {display: none;}
-.newsBox{
-  -ms-overflow-style: none;  /* IE and Edge */
+.newsBox{-ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-.newsBox .news{width: 80%;height: 17%;
-  box-shadow:0px 5px 7px 0px rgba(226, 226, 226, 0.699);
+.newsBox .news{width: 80%;height: 17%;box-shadow:0px 5px 7px 0px rgba(226, 226, 226, 0.699);
 margin:6% 4%;border:1px solid rgba(211, 211, 211, 0.5);border-radius: 10px;
 display: flex;align-items: center;justify-content:flex-start;
 padding-right:1em;padding-left: 1em;}
@@ -38,38 +46,25 @@ padding-right:1em;padding-left: 1em;}
 .newsBox .news .dot{height: 20px;width: 20px;
     background-color: #09cf6515;border:1px solid #09CF64;
     border-radius: 50%;display: inline-block;position:relative;}
-
 .newsBox .news .dot2 {height: 7px;width: 7px;background-color: #09CF64;
     border-radius: 50%;position:absolute;margin:30% 32%;display: inline-block;}
-
 .newsBox .news .dot1 {height: 20px;width: 20px;background-color: rgba(255, 42, 42, 0.17);
-    border:1px solid rgb(255, 70, 70);border-radius: 50%;display: inline-block;
-    position:relative;}
-
+    border:1px solid rgb(255, 70, 70);border-radius: 50%;display: inline-block;position:relative;}
 .newsBox .news .dot12{height: 7px;width: 7px;background-color: rgb(255, 70, 70);
-    border-radius: 50%;position:absolute;margin:30% 32%;
-    display: inline-block;}
-
+    border-radius: 50%;position:absolute;margin:30% 32%;display: inline-block;}
 .newsBox .news .dot3 {height: 20px;width: 20px;background-color:rgba(146, 4, 255, 0.089);
-    border:1px solid rgb(153, 66, 252);border-radius: 50%;display: inline-block;
-    position:relative;}
-
+    border:1px solid rgb(153, 66, 252);border-radius: 50%;display: inline-block;position:relative;}
 .newsBox .news .dot32 {height:7px;width: 7px;background-color: rgb(153, 66, 252);
     border-radius: 50%;position:absolute;margin:30% 32%;display: inline-block;}
-
 .newsBox .news .dot4{height: 20px;width: 20px;border-radius: 50%;
   background-color:rgba(69, 188, 255, 0.06);border:1px solid rgb(69, 187, 255);
   display: inline-block;position:relative;}
-
 .newsBox .news .dot42 {height: 7px;width: 7px;background-color:rgb(69, 187, 255);
     border-radius: 50%;position:absolute;margin:30% 32%;display: inline-block;}
-
 .newsBox .news .dot5{height: 20px;width: 20px;background-color:#09cf6515;
   border:1px solid #09CF64;border-radius: 50%;display: inline-block;position:relative;}
-
 .newsBox .news .dot52 {height: 7px;width: 7px;background-color:#09CF64;
     border-radius: 50%;position:absolute;margin:30% 32%;display: inline-block;}
-
 .newsBox .news p{font-size:0.8em;font-weight:normal;color:#444;margin:0;margin-left:5%;}
 
 
@@ -146,7 +141,7 @@ padding-right:1em;padding-left: 1em;}
 margin-bottom:5%;font-family:'Roboto',sans-serif;padding-left:0.5em;border-radius:3px;
 border:1px solid rgb(206, 201, 201);background-color:rgb(252, 252, 252);}
 .SupportRight .support_form form input:focus{outline:none;
-border:1.7px solid #0293e7;}
+border:1px solid #0293e7;transition:0.5s;}
 .SupportRight .support_form form input::placeholder{color:rgb(206, 201, 201);
 font-size:0.9em;}
 .SupportRight .support_form form input[type="checkbox"]{
@@ -170,14 +165,7 @@ font-weight:500;font-family:'Century Gothic';
 transition: 0.32s;
 }
 .SupportRight .support_form form button:hover{box-shadow: 0px 15px 20px -3px #005bd3a9;}
-.SupportRight .support_form form button img{
-  width:10%;margin-left:4%;
-  /* animation-name:buttonA;
-animation-duration:0.7s;
-animation-timing-function: linear;
-animation-iteration-count: infinite; */
-}
-@keyframes buttonA{ 0%{width: 8%;} 50%{width:12%;} 100%{width:8%;}}
+.SupportRight .support_form form button img{width:10%;margin-left:4%;}
 
 
 .SupportRight a{border:1px solid;width:74%;max-width: 74%;min-height:25px;font-size:0.8em;margin:2% auto;
@@ -186,12 +174,10 @@ font-family: 'Roboto',sans-serif;}
 .SupportRight a img{width:10%;margin-right:3%;}
 .SupportRight .vaccine_link{
   background-image:linear-gradient(to right,rgba(9, 224, 108, 0.82),rgba(9, 255, 0, 0.84));
-  border:1px solid rgba(44, 248, 88, 0.623);
-  border-radius: 4px;}
+  border:1px solid rgba(44, 248, 88, 0.623);border-radius: 4px;}
 .SupportRight .status_link{
   background-image:linear-gradient(to bottom right,rgba(114, 65, 255, 1),rgba(94, 47, 228, 0.63));
-  border:1px solid rgba(212, 121, 255, 0);
-  border-radius: 4px;}
+  border:1px solid rgba(212, 121, 255, 0);border-radius: 4px;}
 .SupportRight .status_link img{width:9%;}
 
 
@@ -204,7 +190,12 @@ font-family: 'Roboto',sans-serif;}
 .numBox1, .numBox2, .numBox3{width: 85%;}
 .p11{font-size: 0.9em;}.p01{font-size:1em;}
 .p001{margin-left:-2%;font-size: 0.8em;}.p12{font-size: 1.2em;}
-
+/* .helplineBox .numBox{border:1px solid;margin:0;} */
+.helplineBox .lastNumbox{display: none;}
+.helplineBox .doSupport{width:90%;border:none;margin-top:4%;
+  box-shadow: 0px 5px 10px -5px rgb(255, 0, 0);height:20px;}
+.helplineBox .doSupport a{font-size:0.6em;}
+/* .helplineBox .numBox .numBox_icon{border:1px solid;} */
 /* Support Page  */
 .SupportRight .head-text{font-weight:500;font-size:0.69em;}
 .SupportRight .head-text img{width:4%;}

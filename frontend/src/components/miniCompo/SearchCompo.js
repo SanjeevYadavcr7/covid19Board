@@ -6,7 +6,7 @@ function SearchCompo(props) {
     const {isFetching, countryData} = props;
     return (
         <div className="statusTable">
-            <table className="tableBox">
+            <table>
                 <thead>
                     <tr>
                         <th>Country/UT</th>
