@@ -1,7 +1,7 @@
 <h1>CovidBoard | pandemic monitoring webapp</h1>
 <p>Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"><br/><br/>CovidBoard is a dashboard system :computer: for getting information related to covid19 pandemic</p> You can visit <a href="http://covid19infoboard.herokuapp.com/">CovidBoard here</a><br/><br/>
 <p align="center">
-<img src="https://github.com/SanjeevYadavcr7/covid19Board/blob/main/covid.PNG" width="600px" height="270px" hspace="40">
+<img src="https://github.com/SanjeevYadavcr7/covid19Board/blob/main/covid.PNG" width="600px" height="330px" hspace="40">
 
 ## <h3> Project Features </h3>
 - [x] Support System <br/>
