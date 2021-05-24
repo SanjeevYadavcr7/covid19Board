@@ -17,21 +17,9 @@
 - [x] Express v4.17.1(for handling HTTP requests) <br/>
 - [x] react-chart-js v2.11.1(for plotting covid pandemic data) <br/>
 
-## <h3>Project Snapshots</h3>
-<p align="center">
-<img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/mobile-preshak3.png" width="308px" height="547px" hspace="40">
-<img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/mobile-preshak2.png" width="308px" height="547px" hspace="40"> 
-</p>
-<br/>
-<br/>
-<p align="center"><img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/desktop-preshak.png" width="800px" height="430px"></p>
-<br/>
-<br/>
-<p align="center"><img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/desktop-mail1.png" width="800px" height="430px"></p>
-
 ## <h3>Setup</h3>
 ```
-$ yarn
-$ yarn dev
+$ node server.js
+$ npm start
 ```
 
