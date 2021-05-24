@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
-// import { useHistory } from "react-router-dom";
 import './Dashboard.css'
-import { createData } from '../api/SupportApi';
+import { createData, getData } from '../api/SupportApi';
 import CovidApi from '../api/CovidApi';
 import banner from './images/banner5.png';
 import RightCompo from './miniCompo/SupportRight';
@@ -11,7 +10,6 @@ import SupportSearchCompo from './miniCompo/SupportSearchCompo';
 
 
 function Support() {
-    // let history = useHistory();
     const [word, setWord] = useState('');
     const [city, setCity] = useState('');
     const [data, setData] = useState('');
@@ -22,13 +20,14 @@ function Support() {
         cities:[]
     })
 
-    function onSubmit(childData){setData(childData);}
+    function onSubmit(childData){
+        setData(childData);
+    }
 
     useEffect(() => {
         if(data !== ''){
             const onFetch = async(data) => {
                 console.log("Pushing Data");
-                // await createData(data);
                 const flag = await createData(data);
                 if(flag !== 'error'){
                     setFlag(true);
@@ -49,6 +48,7 @@ function Support() {
                 const item = document.querySelector('#doneNotify');
                 item.classList.add('afterSupport');
                 item.classList.remove('notify');
+                // history.push('/')
             },2000)
         }
     }
@@ -80,7 +80,7 @@ function Support() {
                     <div className="searchBox">
                         <CheckBox childWord={getWord} childCity={getCity} handleFilters={filters => handleFilters(filters, "options")} />
                         <p className="notice">* Table contains information of the people who want to help during this covid situation</p>
-                        <SupportSearchCompo arr={Filters} term="options" word={word} city={city}/>
+                        <SupportSearchCompo arr={Filters} term="options" word={word} city={city} />
                     </div>
                 </div>
             </div>

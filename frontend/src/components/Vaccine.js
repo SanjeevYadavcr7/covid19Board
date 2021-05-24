@@ -88,7 +88,7 @@ function Vaccine() {
                         <span>visit <Link to="/cowin" target="_blank" className="link">covin.gov.in</Link> to book your slot</span>  
                         </p>
                         <div className="statusTable">
-                            <table className="tableBox">
+                            <table>
                                 <thead>
                                     <tr>
                                         <th>Center<span className="box_rm">Name</span></th>

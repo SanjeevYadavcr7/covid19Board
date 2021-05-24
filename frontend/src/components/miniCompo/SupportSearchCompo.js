@@ -16,7 +16,8 @@ function SupportSearchCompo(props) {
 
     useEffect(() => {
         const fetchItems = async() => {
-            console.log("Fetching Data")
+            // console.log("Fetching Data");
+            // console.log("Setting Data");
             const data = await getData();
             let newData = [];
             let checkedIn = 1;
@@ -101,7 +102,7 @@ function SupportSearchCompo(props) {
                     helperData.map((rowData, index) => {
                         const arr = rowData.help.split(",").join(' ').split(' ');
                         return(
-                        <tr key={rowData.name}>
+                        <tr key={index}>
                             <td>{rowData.name}</td>
                             <td>{rowData.city}</td>
                             <td>{rowData.phone}</td>
@@ -130,7 +131,7 @@ function SupportSearchCompo(props) {
                                 }
                         }).map((rowData, index) => {
                             return(
-                            <tr key={rowData.name}>
+                            <tr key={index}>
                                 <td>{rowData.name}</td>
                                 <td>{rowData.city}</td>
                                 <td>{rowData.phone}</td>
