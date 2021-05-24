@@ -1,4 +1,4 @@
-<h1>CovidBoard | Pandemic Monitoring WebApp</h1>
+<h1>CovidBoard | pandemic monitoring webapp</h1>
 <p>Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"><br/><br/>CovidBoard is a dashboard system :computer: for getting information related to covid19 pandemic</p> You can visit <a href="https://preshak-filesharingapp.herokuapp.com/">Preshak here</a><br/><br/>
 <p align="center">
 <img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/UI-Preshak.png" width="400px" height="240px" hspace="40">
