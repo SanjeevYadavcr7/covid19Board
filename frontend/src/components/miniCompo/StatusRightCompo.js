@@ -70,7 +70,7 @@ function StatusRightCompo(props) {
                         return(
                             <div className="news newsCountry" key={rowData.country}>
                                     <span className={`dot${++i}`}><span className={`dot${i}${j}`}></span></span>
-                                <p><strong>{rowData.country}</strong> - {covertToLakhs(rowData.cases)}</p>
+                                <p><span>{rowData.country}</span> - {covertToLakhs(rowData.cases)}</p>
                             </div>
                         )
                     }) : ''

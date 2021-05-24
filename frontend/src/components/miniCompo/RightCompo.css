@@ -2,20 +2,24 @@
     flex-direction: column;justify-content:space-evenly;align-items: center;}
 .helplineBox{width: 90%;height: 45%;border:1px solid transparent;}
 .newsBox{width: 90%;height: 50%;border:1px solid transparent;}
-.head-text{color: #555;font-weight:600;margin-left:5%;font-size:0.9em;letter-spacing: 0.02em;}
+.head-text{color: #444;font-weight:500;margin-left:5%;font-size:0.9em;letter-spacing: 0.02em;}
 .numBox{border:none;display: flex;flex-direction: row;justify-content: space-evenly;align-items: center;}
 
 /* styling get/give help button  */
+
 .helplineBox .doSupport{
 width:87%;padding:1em 0em;height:10px;border-radius:3px;
 background-image: linear-gradient(to right, rgb(236, 61, 55), rgb(226, 26, 26));
 box-shadow: 0px 10px 20px -5px rgb(255, 0, 0);
 letter-spacing:0.08em;text-transform: uppercase;
-margin:3% auto;margin-left:5%;justify-content: center;}
-.helplineBox .doSupport a{margin:0;color:#fff;transition:0.7s;font-family:'Century Gothic';font-weight:500;font-size:0.7em;}
+margin:9% auto;margin-left:5%;justify-content: center;}
+.helplineBox .lastNumbox{display: none;}
+.helplineBox .doSupport a{margin:0;color:#fff;transition:0.7s;
+  font-weight:400;font-size:0.7em;}
 .helplineBox .doSupport a:hover, .doSupport:hover{cursor: pointer;letter-spacing:0.12em;}
 .helplineBox .doSupport img{width:5.5%;margin-left: 3%;animation-name:heartBeat;animation-duration:0.64s;animation-timing-function: ease-in;animation-iteration-count: infinite;}
 @keyframes heartBeat{ 0%{width: 4.5%;} 50%{width:7.5%;} 100%{width:4.5%;}}
+
 /* styling get/give help button ends*/
 
 .numBox_icon{border: 1px solid rgb(69, 187, 255);width: 15%;height: 40px;
@@ -23,9 +27,9 @@ margin:3% auto;margin-left:5%;justify-content: center;}
 .numBox_icon p{margin: 23% 35%;padding: 0;font-weight: bold;
     color:rgb(69, 187, 255);}
 .numBox_num{border:1px solid transparent;width: 65%;}
-.numBox_num p{font-size: 0.9em;color: #666;
-    font-weight:bold;letter-spacing: 0.03em;}
-.numBox_num .small-text{font-weight: 500;font-size: 0.9em;}
+.numBox_num p{font-size: 0.8em;color: #666;
+    font-weight:600;letter-spacing: 0.03em;}
+.numBox_num .small-text{font-weight: 500;font-size:0.85em;}
 .sec{background-color: rgba(255, 42, 42, 0.17);border:1px solid rgb(255, 70, 70);}
 .numBox_icon .sec-text{color: rgb(255, 70, 70);}
 .third{background-color:rgba(146, 4, 255, 0.089);border:1px solid rgb(153, 66, 252);}
@@ -38,11 +42,15 @@ margin:3% auto;margin-left:5%;justify-content: center;}
 .newsBox{-ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-.newsBox .news{width: 80%;height: 17%;box-shadow:0px 5px 7px 0px rgba(226, 226, 226, 0.699);
+.newsBox .news{
+  width: 80%;height: 17%;box-shadow:0px 5px 7px 0px rgba(226, 226, 226, 0.699);
 margin:6% 4%;border:1px solid rgba(211, 211, 211, 0.5);border-radius: 10px;
 display: flex;align-items: center;justify-content:flex-start;
 padding-right:1em;padding-left: 1em;}
-
+.newsBox .news p{
+  font-size:0.7em;font-weight:normal;color:#444;margin:0;margin-left:5%;}
+.newsBox_link{font-size:0.7em;position: absolute;margin-top:-2.6%;
+    margin-left:13%;}
 .newsBox .news .dot{height: 20px;width: 20px;
     background-color: #09cf6515;border:1px solid #09CF64;
     border-radius: 50%;display: inline-block;position:relative;}
@@ -65,7 +73,6 @@ padding-right:1em;padding-left: 1em;}
   border:1px solid #09CF64;border-radius: 50%;display: inline-block;position:relative;}
 .newsBox .news .dot52 {height: 7px;width: 7px;background-color:#09CF64;
     border-radius: 50%;position:absolute;margin:30% 32%;display: inline-block;}
-.newsBox .news p{font-size:0.8em;font-weight:normal;color:#444;margin:0;margin-left:5%;}
 
 
 /* //////////////--> StatusRightComponent  <--/////////////// */
@@ -73,11 +80,13 @@ padding-right:1em;padding-left: 1em;}
 .newsBoxs{width: 90%;height: 50%;border:1px solid transparent;overflow: hidden;}
 .newsBoxs::-webkit-scrollbar {display: none}
 .newsBoxs{-ms-overflow-style: none;scrollbar-width: none;}
-.newsBoxs .news{width: 75%;height: 10%;box-shadow:0px 5px 7px 0px rgba(226, 226, 226, 0.699);
-margin:6% 4%;border:1px solid rgba(211, 211, 211, 0.5);border-radius: 10px;
+.newsBoxs .news{
+width:75%;height:10%;border:1px solid rgba(211, 211, 211, 0.5);
+box-shadow:0px 5px 7px 0px rgba(226, 226, 226, 0.699);
 display: flex;align-items: center;justify-content:flex-start;
-padding-right:1em;padding-left: 1em;}
-
+padding-right:1em;padding-left: 1em;margin:6% 4%;
+border-radius: 10px;
+}
 .newsBoxs .news .dot1,.newsBoxs .news .dot5 {background-color: rgba(255, 42, 42, 0.17);border:1px solid rgb(255, 70, 70);}
 .newsBoxs .news .dot2 {background-color:#09cf6515;border:1px solid #09CF64;}
 .newsBoxs .news .dot3 {background-color:rgba(146, 4, 255, 0.089);border:1px solid rgb(153, 66, 252);}
@@ -96,81 +105,82 @@ padding-right:1em;padding-left: 1em;}
     height: 5px;width: 5px;border-radius: 50%;
     position:absolute;margin:35% 35%;display: inline-block;}
 
-.newsBoxs .news p{font-size:0.9em;font-weight:normal;color:#555;
-    font-family: 'Roboto',sans-serif;letter-spacing: 0.02em;
-    margin:0;margin-left:5%;}
+.newsBoxs .news p{
+  font-size:0.9em;font-weight:500;color:#555;
+  letter-spacing: 0.02em;margin:0;margin-left:5%;
+}
+.newsBoxs .news p span{font-weight:600;}
 .newsBoxs small{color: rgb(255, 52, 52);margin-left: 3%;letter-spacing: 0.02em;}
 
-
-.numBox1, .numBox2, .numBox3{width: 76%;height:22%;border:1px solid;
-  margin:5% 5%;border-radius: 10px;padding: 0;}
-
-.numBox1{border-color: rgb(153, 66, 252);background-color:rgba(146, 4, 255, 0.089);padding: 0;margin-top: 7%;}
+.numBox1, .numBox2, .numBox3{
+  width: 76%;height:22%;border:1px solid;
+  margin:5% 5%;border-radius: 10px;padding:0;
+}
+.numBox1{border-color: rgb(153, 66, 252);background-color:rgba(146, 4, 255, 0.089);
+  padding: 0;margin-top: 7%;}
 .numBox2{border-color: #09CF64;background-color:#09cf6515;}
 .numBox3{border-color: rgb(255, 70, 70);background-color:rgba(255, 42, 42, 0.17);}
 .p11{color:rgb(153, 66, 252);font-weight:500;margin: 0;margin-top:2%;
   margin-left:5%;line-height: 2em;}
 .p01{margin-right:16%;}
-.p12{color: rgb(153, 66, 252);font-size: 1.4em;font-weight: bold;}
-.p001{font-size: 0.9em;font-weight: bold;margin-left:-4%;}
+.p12{color: rgb(153, 66, 252);font-size: 1.3em;font-weight:600;}
+.p001{font-size: 0.9em;font-weight:500;margin-left:-4%;}
 .greenClass{color: #09CF64;}
 .redClass{color: rgb(255, 70, 70);}
 .numBox2 .p11 .p01{margin-right: 15%;}
 .news img{width:21%;border-radius: 7px;}
-
+.status_helplineBox .head-text{font-size:0.9em;font-weight:500;}
+.newsBoxs .head-text{font-size:0.9em;font-weight:500;}
 
 /* //////////////////////--> SupportRight Component <--///////////////////////// */
 
 .SupportRight{width:100%;height:100%;border:1px solid transparent;display:flex;flex-direction:column;}
-.SupportRight .head-text{color:#555;font-size:0.8em;
-  letter-spacing:0.05em;font-family: 'Roboto',sans-serif;
-  margin-top:12%;border-radius:3px;color:#fff;
-  display:flex;align-items: center;
-  justify-content: space-evenly;
-  width:83%;font-weight:500;text-transform:uppercase;
-  padding:0.7em 0em 0.7em 0em;
+.SupportRight .head-text{
+  letter-spacing:0.05em;border-radius:3px;color:#fff;
+  display:flex;align-items: center;justify-content: space-evenly;
+  width:83%;padding:0.7em 0em 0.7em 0em;margin-top:12%;
   background-image:linear-gradient(to top right,#005bd3,#2e77ff );
-  /* border:1px solid #0b72f8; */
-}
+  font-size: 0.71em;font-weight:400;
+  text-transform:uppercase;}
 .SupportRight .head-text img{width:5%;margin-left:2%;}
 .SupportRight .support_form{width:85%;height:auto;border:1px solid transparent;
-  border-bottom:1px solid lightgray;margin-left:5%;}
-.SupportRight .support_form form label{font-family:'Lato',sans-serif;font-size:0.8em;
-  font-weight:550;color:#444;text-transform:lowercase;display:block;margin-bottom:2%;}
-.SupportRight .support_form form input{display:block;width:93%;height:30px;
-margin-bottom:5%;font-family:'Roboto',sans-serif;padding-left:0.5em;border-radius:3px;
-border:1px solid rgb(206, 201, 201);background-color:rgb(252, 252, 252);}
-.SupportRight .support_form form input:focus{outline:none;
-border:1px solid #0293e7;transition:0.5s;}
-.SupportRight .support_form form input::placeholder{color:rgb(206, 201, 201);
-font-size:0.9em;}
+  border-bottom:1px solid lightgray;margin-left:5%;
+  font-family:'Poppins',sans-serif;
+}
+.SupportRight .support_form form label{font-size:0.76em;text-transform:lowercase;
+  font-weight:500;color:#444;display:block;margin-bottom:1%;}
+.SupportRight .support_form form input{
+display:block;width:93%;height:30px;font-size:0.7em;
+margin-bottom:5%;padding-left:0.5em;border-radius:3px;
+border:1px solid rgb(206, 201, 201);background-color:rgb(252, 252, 252);
+}
+.SupportRight .support_form form input:focus{outline:none;font-size:0.76em;border:1px solid #0293e7;transition:0.5s;color: #0293e7;}
+.SupportRight .support_form form input::placeholder{color:rgb(206, 201, 201);font-size:0.9em;}
 .SupportRight .support_form form input[type="checkbox"]{
   margin:0;padding:0;width:fit-content;height:auto;
 }
 .SupportRight .support_form form .labels{width:32%;display:flex;
   align-items:center;
 border:1px solid rgb(206, 201, 201);padding:0.5em 1em;
-border-radius:3px;float: left;margin-bottom:4%;margin-right:4%;}
-.SupportRight .support_form form .labels label{text-transform:capitalize;
-margin-left:10%;}
+border-radius:3px;float: left;margin-bottom:4%;margin-right:4%;
+}
+.SupportRight .support_form form .labels label{text-transform:capitalize;margin-left:10%;font-size:0.7em;}
 .SupportRight .support_form form input[name="notListed"]{width:90%;}
 .SupportRight .support_form form input[name="notListed"]::placeholder{color:rgb(156, 154, 154);}
-.SupportRight .support_form form button{width:60%;height:35px;font-family:'Roboto';
-background-color:#005bd3;border-radius:3px;
-background-image:linear-gradient(to top right,#005bd3,#2e77ff );
-border:1px solid #005bd3;color:#fff;
-letter-spacing:0.1em;font-size:0.75em;margin:10% auto;
+.SupportRight .support_form form button{
+width:60%;height:35px;border:1px solid #005bd3;border-radius:3px;
 display:flex;justify-content: center;align-items: center;
-font-weight:500;font-family:'Century Gothic';
-transition: 0.32s;
+color:#fff;background-color:#005bd3;background-image:linear-gradient(to top right,#005bd3,#2e77ff );
+font-weight:400;font-size:0.7em;text-transform: uppercase;
+transition: 0.32s;letter-spacing:0.1em;margin:10% auto;
 }
 .SupportRight .support_form form button:hover{box-shadow: 0px 15px 20px -3px #005bd3a9;}
 .SupportRight .support_form form button img{width:10%;margin-left:4%;}
-
-
-.SupportRight a{border:1px solid;width:74%;max-width: 74%;min-height:25px;font-size:0.8em;margin:2% auto;
-margin-top:5%;color:#fff;font-weight:400;
-font-family: 'Roboto',sans-serif;}
+.SupportRight a{
+border:1px solid;width:74%;max-width: 74%;min-height:25px;
+margin:2% auto;margin-top:5%;color:#fff;
+font-weight:400;font-size:0.75em;font-family: 'Poppins',sans-serif;
+}
 .SupportRight a img{width:10%;margin-right:3%;}
 .SupportRight .vaccine_link{
   background-image:linear-gradient(to right,rgba(9, 224, 108, 0.82),rgba(9, 255, 0, 0.84));
@@ -183,40 +193,59 @@ font-family: 'Roboto',sans-serif;}
 
 @media only screen and (min-width: 960px) and (max-width: 1300px){
 .helplineBox{overflow: hidden;}
+.helplineBox .numBox,
+.helplineBox .numBox .numBox_icon,
+.helplineBox .numBox .numBox_num{max-height:20%;}
+.helplineBox .numBox{margin-bottom:6%;}
+.helplineBox .numBox .numBox_num p{margin: 0;}
+.helplineBox .doSupport{
+  width:90%;height:15px;border:none;margin-top:11%;
+  box-shadow: 0px 5px 10px -5px rgb(255, 0, 0);
+}
+.helplineBox .doSupport a{font-size:0.65em;}
 .numBox_icon{width: 15%;height: 5%;padding: 0;}
 .numBox_num p{font-size: 0.8em;}
-.newsBox .news p{font-size: 0.7em;}
+.newsBox .newsBox_link{margin-top:-3.1%;font-size: 0.65em;}
+.newsBox .news p{font-size: 0.6em;}
 .newsBoxs .newsCountry p{font-size: 0.8em;}
 .numBox1, .numBox2, .numBox3{width: 85%;}
 .p11{font-size: 0.9em;}.p01{font-size:1em;}
 .p001{margin-left:-2%;font-size: 0.8em;}.p12{font-size: 1.2em;}
-/* .helplineBox .numBox{border:1px solid;margin:0;} */
-.helplineBox .lastNumbox{display: none;}
-.helplineBox .doSupport{width:90%;border:none;margin-top:4%;
-  box-shadow: 0px 5px 10px -5px rgb(255, 0, 0);height:20px;}
-.helplineBox .doSupport a{font-size:0.6em;}
-/* .helplineBox .numBox .numBox_icon{border:1px solid;} */
+
+
 /* Support Page  */
-.SupportRight .head-text{font-weight:500;font-size:0.69em;}
+
+.SupportRight .head-text{font-weight:400;font-size:0.69em;
+text-transform: capitalize;letter-spacing:0.06em;}
 .SupportRight .head-text img{width:4%;}
-.SupportRight .support_form form label{font-weight:600;color:#444;}
+.SupportRight .support_form form label{font-weight:600;color:#444;font-size:0.66em;}
 .SupportRight .support_form form .labels{font-size:0.9em;width:29%;}
 .SupportRight .support_form form .labels label{margin-left:5%;}
 .SupportRight .status_link{display:none;}
-.SupportRight .support_form form button{width:50%;font-size:0.7em;border-radius:2px;
-  border:1px solid #005bd3;background-color:#005bd3;font-weight:500;}
+.SupportRight .support_form form button{
+  width:50%;border:1px solid #005bd3;border-radius:2px;text-transform:capitalize;
+  font-size:0.7em;font-weight:400;background-color:#005bd3;}
 .SupportRight .support_form form button img{width:13%;}
-.SupportRight .vaccine_link{font-size:0.7em;}
+.SupportRight .support_form form input:focus{color:#0970f7;}
+.SupportRight .vaccine_link{font-size:0.6em;}
 .SupportRight .vaccine_link img{width:9%;}
 }
+
+/* vaccine Page  */
+.helplineBox .fourthBox .small-text{font-size:0.8em;}
+
+/* News Page  */
+.newsBox .news .dot{width:23px;height:20px;}
 
 @media only screen and (max-width:600px) {
 
 .RightCompo{border:1px solid transparent;width: 100%;padding: 0;}
 .helplineBox{border:1px solid transparent;width:100%;padding:0;}
 .head-text{margin: 4% 2%;}
-.status_helplineBox{width:100%;height:auto;
-display: flex;flex-direction:row;justify-content: space-around;}
+.status_helplineBox{
+  width:100%;height:auto;display: flex;
+  flex-direction:row;justify-content: space-around;
+}
 
 /* removing status page boxes for small devices(reason - useless)  */
 .status_helplineBox{display: none;}
@@ -233,6 +262,11 @@ display: flex;flex-direction:row;justify-content: space-around;}
 .numBox_icon{width:10%;height:30px;}
 .numBox_icon p{margin:0;}
 .no_display{display: none;}
+.newsBox .newsBox_link{
+  font-size:0.65em;
+  margin-left:72%;margin-top:-8%;
+}
+/* .newsBox .newsBox_link a{border:1px solid;display: none;margin:0;} */
 
 /* adjusting dots size for smaller component <--status right component  */
 .newsBoxs .newsCountry p{font-size: 0.8em;}
@@ -263,11 +297,12 @@ display: flex;flex-direction:row;justify-content: space-around;}
 .SupportRight .support_form form input:focus{border:1px solid #0970f7;}
 .SupportRight .head-text{
   display:flex;align-items: center;justify-content: center;
-  font-size:0.75em;font-family:'Century Gothic';font-weight:500;letter-spacing:0.06em;color:#fff;
+  font-size:0.79em;font-weight:500;letter-spacing:0.06em;color:#fff;
   background-image:linear-gradient(to right,#2e77ff,#005bd3 );
   border:1px solid #005bd3;border-radius:4px;box-shadow: 0px 10px 20px -20px #005bd3a9;
-  width:90%;padding:0.8em 1em;margin: 0% auto;margin-bottom:4%;}
-.SupportRight .head-text img{width:4%;}
+  width:90%;padding:0.8em 1em;margin: 0% auto;margin-bottom:4%;
+}
+.SupportRight .head-text img{width:4%;margin-left: 5%;}
 .SupportRight .support_form form input:focus{color:#0970f7;
   letter-spacing:0.2em;font-weight:500;}
 .SupportRight .support_form form input, .SupportRight .support_form form label{

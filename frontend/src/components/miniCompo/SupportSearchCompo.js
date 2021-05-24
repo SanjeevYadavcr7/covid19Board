@@ -99,7 +99,7 @@ function SupportSearchCompo(props) {
                 {
                     (check === 0) ?
                     helperData.map((rowData, index) => {
-                        const arr = rowData.help.split(",");
+                        const arr = rowData.help.split(",").join(' ').split(' ');
                         return(
                         <tr key={rowData.name}>
                             <td>{rowData.name}</td>
@@ -134,7 +134,15 @@ function SupportSearchCompo(props) {
                                 <td>{rowData.name}</td>
                                 <td>{rowData.city}</td>
                                 <td>{rowData.phone}</td>
-                                <td>{rowData.help}</td>
+                                <td> {
+                                        rowData.help.split(",").map((resource,index) => {
+                                                return(
+                                                    <span key={index}>
+                                                    {resource}
+                                                    </span>
+                                                )
+                                        })
+                                    }</td>
                             </tr>
                             )
                         })

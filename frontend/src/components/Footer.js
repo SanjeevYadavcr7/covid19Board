@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from './images/like.png';
 import './Dashboard.css';
 
@@ -7,9 +8,13 @@ function Footer() {
         <div className="footers">
             <div className="footer_text">
                 <img src={logo} alt="logo"/>
-                <p>Designed and developed to help & support the people</p>
+                <p><span>Designed and developed</span> to help & support the people</p>
             </div>
-            <p className="phantom">@phantom7 devs</p>
+            <p className="phantom">
+                <Link to="/profile" target="_blank">
+                    @phantom7 devs
+                </Link>
+            </p>
         </div>
     )
 }

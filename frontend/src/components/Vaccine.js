@@ -91,9 +91,9 @@ function Vaccine() {
                             <table className="tableBox">
                                 <thead>
                                     <tr>
-                                        <th>Center Name</th>
+                                        <th>Center<span className="box_rm">Name</span></th>
                                         <th>Location</th>
-                                        <th>Avaiable Slots</th>
+                                        <th>Avaiable <span className="box_rm">Slots</span></th>
                                         <th>Vaccine</th>
                                         <th>Type</th>
                                     </tr>

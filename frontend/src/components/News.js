@@ -25,7 +25,7 @@ function News() {
                             <p>
                                 <span className="newsTag">Important</span><br className="newsTag-break"/><br/>
                                 <span className="newsPara">Covid will not hit peak after mid-May, says Delhi HC, asks center about its preparedness</span>
-                                <br/>
+                                <br className="newsTag-break"/>
                                 <span className="newsSmallPara">
                                     Over 25.52 lakh cases are currently active while over 1.38 crore people have recovered after testing positive
                                 </span>

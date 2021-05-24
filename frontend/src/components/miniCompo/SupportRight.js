@@ -34,7 +34,7 @@ function SupportRight(props) {
 
     return (
         <div className="SupportRight">
-            <p className="head-text">Want to help, Support now <img src={arrow} alt="arrow-down" /></p>
+            <p className="head-text">Want to help! Support now <img src={arrow} alt="arrow-down" /></p>
             <div className="support_form">
                 <form onSubmit={submitHandler}>
                     <label>What is your name?</label>

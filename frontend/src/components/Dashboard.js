@@ -23,7 +23,7 @@ class main extends Component{
                             {CovidApi.getTodayDate()}
                             <span>day</span>
                         </p>
-                        <div className="banner">
+                        <div className="banner banner_dashboard">
                             <img src={banner} alt="banner_image" />
                         </div>
                         <div className="box_m_info">

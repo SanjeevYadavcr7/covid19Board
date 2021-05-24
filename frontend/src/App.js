@@ -53,10 +53,13 @@ class App extends Component{
                     <div className="navBar">
                         <NavLink exact to="/" activeclassname="active abc"><img src={home} alt="home_logo" /><span>Home</span></NavLink>
                         <NavLink to="/status" activeclassname="bctive"><img src={status} alt="home_logo" /><span>Status</span></NavLink>
-                        <NavLink to="/news" activeclassname="active"><img src={news} alt="news"/><span className="ee">News</span></NavLink>
                         <NavLink to="/support" activeClassName="active"><img src={support} alt="support"/><span>Support</span></NavLink>
                         {/* <NavLink to="/about" activeclassname="active"><img src={about} alt="about"/><span className="cc">Symptoms</span></NavLink> */}
-                        <NavLink to="/vaccine" activeclassname="active"><img src={vaccine} alt="vaccine"/><span className="dd">Vaccination</span></NavLink>
+                        <NavLink to="/vaccine" activeclassname="active"><img src={vaccine} alt="vaccine"/><span className="dd">Vaccine</span></NavLink>
+                        <NavLink to="/news" activeclassname="active"><img src={news} alt="news"/><span className="ee">News</span></NavLink>
+                    </div>
+                    <div className="footer_box2">
+                      { (!this.state.isFetching) ? <Footer /> : ''}
                     </div>
                 </div>
 
@@ -80,9 +83,10 @@ class App extends Component{
                   <Route path="/vaccine" component={Vaccine}></Route>
                   <Route path="/support" component={Support}></Route>
                   <Route path="/cowin" component={() => {window.location.href='https://www.cowin.gov.in/home';return null}}></Route>
+                  <Route path="/profile" component={() => {window.location.href='https://www.linkedin.com/in/sanjeevyadavcr7/';return null}}></Route>
                 </Switch>
             </div>
-            <div className="footer_box">
+            <div className="footer_box no_footer">
             { (!this.state.isFetching) ? <Footer /> : ''}
             </div>
       </Router>

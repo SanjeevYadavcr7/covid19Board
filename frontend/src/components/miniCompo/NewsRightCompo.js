@@ -24,7 +24,7 @@ function NewsRightCompo() {
                         <span className="small-text">Plasma helpline</span></p>
                     </div>
                 </div>
-                <div className="numBox">
+                <div className="numBox fourthBox">
                     <div className="numBox_icon fourth"><p className="fourth-text">V</p></div>
                     <div className="numBox_num"><p>+91-9013151515<br/>
                         <span className="small-text">Vaccine helpline number</span></p>
