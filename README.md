@@ -1,21 +1,21 @@
 <h1>CovidBoard | pandemic monitoring webapp</h1>
-<p>Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"><br/><br/>CovidBoard is a dashboard system :computer: for getting information related to covid19 pandemic</p> You can visit <a href="https://preshak-filesharingapp.herokuapp.com/">Preshak here</a><br/><br/>
+<p>Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"><br/><br/>CovidBoard is a dashboard system :computer: for getting information related to covid19 pandemic</p> You can visit <a href="http://covid19infoboard.herokuapp.com/">CovidBoard here</a><br/><br/>
 <p align="center">
 <img src="https://github.com/SanjeevYadavcr7/Preshak-FileSharing/blob/main/UI-Preshak.png" width="400px" height="240px" hspace="40">
 
 ## <h3> Project Features </h3>
-- [x] Upload File <br/>
-- [x] Email Integration <br/>
-- [x] Send files to specific mail <br/>
-- [x] Automatic notifications<br/>
+- [x] Support System <br/>
+- [x] Search Vaccinaion Center <br/>
+- [x] Monitoring Pandemic Status <br/>
+- [x] Latest News Section<br/>
 - [x] Responsiveness <br/>
 
 ## <h3> Technologies </h3>
+- [x] ReactJS v17.0.2(for UI development) <br/>
 - [x] NodeJS v12.18.3(for dev environment) <br/>
 - [x] MongoDB v3.6.3(for database stuff) <br/>
 - [x] Express v4.17.1(for handling HTTP requests) <br/>
-- [x] Ejs v3.1.5(as template engine)<br/>
-- [x] Multer v1.4.2(for handling "multipart/form-data") <br/>
+- [x] react-chart-js v2.11.1(for plotting covid pandemic data) <br/>
 
 ## <h3>Project Snapshots</h3>
 <p align="center">
