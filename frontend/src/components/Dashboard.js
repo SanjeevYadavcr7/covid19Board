@@ -14,6 +14,7 @@ class main extends Component{
     render(){
         const gbl = '';
         const {country, countryList, isFetching, data2} = this.props;
+        
         const {cases,recovered,deaths,active,todayCases,todayDeaths,todayRecovered} = data2;
         return(
             <>

@@ -6,19 +6,10 @@ import { ToggleButton } from '../miniCompo/ToggleButton';
 
 const options = {
   legend: {
-    display: true,
-    position:'top',
-    align:'end',
-    labels: {
-        // usePointStyle: true,
-        // padding:2,
-        boxWidth:10,
-    }
+     display: true, position:'top', align:'end',labels: {boxWidth:10,}
   },
-  elements: {
-    point: {
-      radius:5,
-    },
+  elements: { 
+    point: {radius:5,},
   },
   responsive:true,
   maintainAspectRatio: false,
@@ -29,6 +20,20 @@ const options = {
       label: function (tooltipItem, data) {
         return numeral(tooltipItem.value).format("0,0");
       },
+      title: (tooltipItem, data) => {
+        const titles = data.datasets[tooltipItem[0]
+          .datasetIndex].titles[tooltipItem[0].index];
+        return (
+          titles
+        )
+      },
+      afterLabel: (tooltipItem, data) => {
+        const afterLabels = data.datasets[tooltipItem.datasetIndex]
+          .afterLabels[tooltipItem.index];
+        return (
+          afterLabels
+        );
+      }
     },
   },
   layout:{
@@ -69,14 +74,17 @@ const options = {
 
 const buildChartData = (data, casesType) => {
   let chartData = [];
+  console.log(`Data[${casesType}] = `)
+  console.log(data[casesType]);
   let lastDataPoint;
   for (let date in data.cases) {
     if (lastDataPoint) {
       let newDataPoint = {x: date,y: data[casesType][date]-lastDataPoint};
-      lastDataPoint = data[casesType][date];
+      // lastDataPoint = data[casesType][date];
+      lastDataPoint = (data[casesType][date]) ? data[casesType][date] : 0.1;
       chartData.push(newDataPoint);
     }
-    lastDataPoint = data[casesType][date];
+    lastDataPoint = (data[casesType][date]) ? data[casesType][date] : 0.1;
   }
   return chartData;
 };
@@ -97,13 +105,16 @@ function Covidgraph(props) {
     const fetchData = async () => {
       let api = "https://disease.sh/v3/covid-19/historical/all?lastdays=50";
       if(props.country !== ''){
-        api = `https://disease.sh/v3/covid-19/historical/${props.country}?lastdays=50`;
+        let getCountry = props.country;
+        if(getCountry === 'us') getCountry = 'usa';
+        api = `https://disease.sh/v3/covid-19/historical/${getCountry}?lastdays=50`;
       }
       await fetch(api)
         .then((response) => {
           return response.json();
         })
         .then((data) => {
+          // console.log(data);
           let chartData;
           let deathChartData;
           let recoverChartData;

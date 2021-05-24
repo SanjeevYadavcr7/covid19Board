@@ -93,7 +93,7 @@ function Vaccine() {
                                     <tr>
                                         <th>Center<span className="box_rm">Name</span></th>
                                         <th>Location</th>
-                                        <th>Avaiable <span className="box_rm">Slots</span></th>
+                                        <th>Available <span className="box_rm">Slots</span></th>
                                         <th>Vaccine</th>
                                         <th>Type</th>
                                     </tr>
