@@ -13,6 +13,7 @@ function Support() {
     const [word, setWord] = useState('');
     const [city, setCity] = useState('');
     const [data, setData] = useState('');
+    const [reg, setReg] = useState([]);
     const [flag,setFlag] = useState(false);
     const FormOptionsData = [{'id':1,'value':'Oxygen'},{'id':2,'value':'Medicine'},{'id':3,'value':'Hospital'},{'id':4,'value':'Vaccine'},{'id':5,'value':'Food'},{'id':6,'value':'Financial'}]
     const [Filters, setFilters] = useState({
@@ -22,16 +23,19 @@ function Support() {
 
     function onSubmit(childData){
         setData(childData);
+        const newArray = [...reg];
+        newArray.push(true);
+        setReg(newArray);
     }
 
     useEffect(() => {
         if(data !== ''){
             const onFetch = async(data) => {
-                console.log("Pushing Data");
+                // console.log("Pushing Data");
                 const flag = await createData(data);
                 if(flag !== 'error'){
                     setFlag(true);
-                    console.log("Data is successfully pushed");
+                    // console.log("Data is successfully pushed");
                     const item = document.querySelector('#doneNotify');
                     item.classList.remove('afterSupport');
                     item.classList.add('notify');
@@ -61,12 +65,22 @@ function Support() {
         
         const newFilters = {...Filters};
         newFilters[category] = filters;
-        // if(category === 'cities'){
-            // do something to filter using cities
-        // }
+        // if(category === 'cities'){do something to filter using cities}
         // showFilteredResults(newFilters);
         setFilters(newFilters); // setting filters state acc. to received filters 
     }
+    // const onRegDone = (e) => {
+    //     console.log("Inside IsReg = ");
+    //     console.log(e);
+    //     // setReg(isReg);
+    // }
+    // console.log("IsReg = ");
+    // console.log(reg);
+
+    let today = new Date();
+    const mins = ( today.getMinutes() > 15 ) ?today.getMinutes()-10:today.getMinutes();
+    const secs = ( today.getSeconds() > 10 ) ?today.getSeconds()-8:today.getSeconds();
+    const date = mins+"mins "+secs+"secs";
 
     return (
         <>
@@ -79,8 +93,9 @@ function Support() {
                     <p className="head-text">Looking for help! Search here....</p>
                     <div className="searchBox">
                         <CheckBox childWord={getWord} childCity={getCity} handleFilters={filters => handleFilters(filters, "options")} />
-                        <p className="notice">* Table contains information of the people who want to help during this covid situation</p>
-                        <SupportSearchCompo arr={Filters} term="options" word={word} city={city} />
+                        <p className="notice">* Table contains information of the people who want to help during this covid situation (updated {date} ago)             
+                        </p>
+                        <SupportSearchCompo arr={Filters} term="options" word={word} city={city} reg={reg}/>
                     </div>
                 </div>
             </div>

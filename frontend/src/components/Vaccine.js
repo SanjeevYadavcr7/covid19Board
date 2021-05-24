@@ -102,7 +102,7 @@ function Vaccine() {
                                 {
                                     (centers.length) ?
                                     centers.map((center, index) => {
-                                        console.log("Center Length[] = "+centers.length)
+                                        // console.log("Center Length[] = "+centers.length)
                                         // let sessions = center.sessions;
                                         return(
                                         <tr key={center.name}>

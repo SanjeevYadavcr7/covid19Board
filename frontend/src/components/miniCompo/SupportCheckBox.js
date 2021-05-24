@@ -9,7 +9,7 @@ function SupportCheckBox(props) {
     const [Checked, setChecked] = useState([]);
     
     const handleCity = (e) => { 
-        console.log("Passing City = "+e.target.value);
+        // console.log("Passing City = "+e.target.value);
         props.childCity(e.target.value); 
     }
 
@@ -22,12 +22,29 @@ function SupportCheckBox(props) {
     }
 
     const handleToggle = (value) => {
+        // console.log("Inside HandleToggle")
         const currentIndex = Checked.indexOf(value);
         const newChecked = [...Checked];
         if(currentIndex === -1) newChecked.push(value);
         else newChecked.splice(currentIndex,1);
         setChecked(newChecked);   
         props.handleFilters(newChecked);
+    }
+
+    const checkUnCheck = (e) =>{
+        if((e.target.id).length <= 5){
+            const newId = e.target.id+"-input";
+            const item = document.querySelector(`#${newId}`);
+            if(item.checked) item.checked = false;
+            else item.checked = true;
+        }
+    }
+
+    const checkUnCheck2 = (e) =>{
+        const newId = e.target.id;
+        const item = document.querySelector(`#${newId}`);
+        if(item.checked) item.checked = false;
+        else item.checked = true;
     }
 
     return (
@@ -40,15 +57,19 @@ function SupportCheckBox(props) {
             <div className="pickOptions">
             {optionsData.map((row) => {
                 return(
-                    <div className="labels" key={row.id}>
-                    <input type="checkbox" name="choice" value={row.value} 
+                    <div className={`labels`} key={row.id} id={`box-${row.id}`} onClick={(e) =>{
+                        checkUnCheck(e)
+                        handleToggle(row.id);
+                        }}>
+                    <input type="checkbox" name="choice" id={`box-${row.id}-input`} value={row.value}
+                    onClick={(e) =>checkUnCheck2(e)}
                     onChange={
                         (e) => {
                             handleWord(e);
                             handleToggle(row.id);
                         }} 
                     checked={Checked.indexOf(row.id) === -1 ? false : true} />
-                    <label>{row.value}</label>
+                    <label onClick={(e)=>checkUnCheck(e)} id={`box-${row.id}`} >{row.value}</label>
                     </div>
                     )
             })}

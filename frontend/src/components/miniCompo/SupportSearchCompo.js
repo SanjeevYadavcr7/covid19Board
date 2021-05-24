@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import '../Dashboard.css';
 import { getData } from '../../api/SupportApi';
 
@@ -7,7 +7,13 @@ function SupportSearchCompo(props) {
     const city = props.city;
     const arr = props.arr;
     const term = props.term;
+    const isReg = props.reg;
     const [helperData,setHelperData] = useState([]);
+
+
+    // console.log("IsReg = "+isReg);
+    // console.log(arr);
+    
 
     let check='';
     if(word === '' && city === '') check=0;
@@ -79,11 +85,11 @@ function SupportSearchCompo(props) {
                     })
                 }
             }
-            if(newData.length>0 || !checkedIn) setHelperData(newData);
-            else setHelperData(data);
+            if(newData.length>0 || !checkedIn) setHelperData(newData.reverse());
+            else setHelperData(data.reverse());
         }
         fetchItems()
-    }, [arr]);
+    }, [arr, isReg]);
 
     return (
         <div className="statusTable">

@@ -15,7 +15,7 @@ function SupportRight(props) {
     const [phone, setPhone] = useState();
     const [help, setHelp] = useState([]);
     const [notList, setNotList] = useState('');
-    // const [rec, setRec] = useState(false);
+    const [isChanged,setIsChanged] = useState([]);
 
     function resetState(){
         setHelp([]); 
@@ -26,6 +26,12 @@ function SupportRight(props) {
         e.preventDefault();
         const data = {name,city,pin,phone,help: help.toString()};
         props.onSubmit(data);
+        // const newArray = [...isChanged];
+        // console.log("NewArray[] = "+newArray);
+        // newArray.push(name);
+        // console.log("NewArray[] = "+newArray);
+        // setIsChanged(newArray);
+        // props.onRegDone(isChanged);
         e.target.reset();
         resetState();
     }

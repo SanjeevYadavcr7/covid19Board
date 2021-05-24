@@ -19,20 +19,6 @@ const options = {
     callbacks: {
       label: function (tooltipItem, data) {
         return numeral(tooltipItem.value).format("0,0");
-      },
-      title: (tooltipItem, data) => {
-        const titles = data.datasets[tooltipItem[0]
-          .datasetIndex].titles[tooltipItem[0].index];
-        return (
-          titles
-        )
-      },
-      afterLabel: (tooltipItem, data) => {
-        const afterLabels = data.datasets[tooltipItem.datasetIndex]
-          .afterLabels[tooltipItem.index];
-        return (
-          afterLabels
-        );
       }
     },
   },
@@ -74,8 +60,8 @@ const options = {
 
 const buildChartData = (data, casesType) => {
   let chartData = [];
-  console.log(`Data[${casesType}] = `)
-  console.log(data[casesType]);
+  // console.log(`Data[${casesType}] = `)
+  // console.log(data[casesType]);
   let lastDataPoint;
   for (let date in data.cases) {
     if (lastDataPoint) {
