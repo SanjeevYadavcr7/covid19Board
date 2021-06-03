@@ -21,11 +21,18 @@ function Support() {
         cities:[]
     })
 
-    function onSubmit(childData){
+    const onSubmit = (childData) => {
         setData(childData);
         const newArray = [...reg];
         newArray.push(true);
         setReg(newArray);
+    }
+
+    function onDone(){
+        setTimeout(()=>{
+                console.log("Reloding windows")        
+                window.location.reload();
+        },2000)
     }
 
     useEffect(() => {
@@ -39,6 +46,7 @@ function Support() {
                     const item = document.querySelector('#doneNotify');
                     item.classList.remove('afterSupport');
                     item.classList.add('notify');
+                    onDone();
                 }
                 else console.log("Unable to push data")
             }
@@ -52,7 +60,6 @@ function Support() {
                 const item = document.querySelector('#doneNotify');
                 item.classList.add('afterSupport');
                 item.classList.remove('notify');
-                // history.push('/')
             },2000)
         }
     }
@@ -65,7 +72,6 @@ function Support() {
         
         const newFilters = {...Filters};
         newFilters[category] = filters;
-        // if(category === 'cities'){do something to filter using cities}
         // showFilteredResults(newFilters);
         setFilters(newFilters); // setting filters state acc. to received filters 
     }
@@ -95,7 +101,7 @@ function Support() {
                         <CheckBox childWord={getWord} childCity={getCity} handleFilters={filters => handleFilters(filters, "options")} />
                         <p className="notice">* Table contains information of the people who want to help during this covid situation (updated {date} ago)             
                         </p>
-                        <SupportSearchCompo arr={Filters} term="options" word={word} city={city} reg={reg}/>
+                        <SupportSearchCompo arr={Filters} reg={reg} term="options" word={word} city={city} />
                     </div>
                 </div>
             </div>

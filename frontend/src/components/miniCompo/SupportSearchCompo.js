@@ -7,13 +7,20 @@ function SupportSearchCompo(props) {
     const city = props.city;
     const arr = props.arr;
     const term = props.term;
-    const isReg = props.reg;
-    const [helperData,setHelperData] = useState([]);
+    const [helperData,setHelperData] = useState([]);    
 
-
-    // console.log("IsReg = "+isReg);
-    // console.log(arr);
+    function refreshPage(){ 
+        window.location.reload(); 
+    }
     
+    const [reg, setReg] = useState([]);
+    useEffect(()=>{
+        setReg(props.reg);
+        if(reg.length>0){
+            window.location.reload();
+        }
+    },[])
+
 
     let check='';
     if(word === '' && city === '') check=0;
@@ -22,8 +29,6 @@ function SupportSearchCompo(props) {
 
     useEffect(() => {
         const fetchItems = async() => {
-            // console.log("Fetching Data");
-            // console.log("Setting Data");
             const data = await getData();
             let newData = [];
             let checkedIn = 1;
@@ -89,7 +94,7 @@ function SupportSearchCompo(props) {
             else setHelperData(data.reverse());
         }
         fetchItems()
-    }, [arr, isReg]);
+    }, [arr]);
 
     return (
         <div className="statusTable">
