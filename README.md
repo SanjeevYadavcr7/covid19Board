@@ -1,6 +1,5 @@
 <h1>CovidBoard | pandemic monitoring webapp</h1>
-<p>Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"><br/><br/>CovidBoard is a dashboard system :computer: for getting information related to covid19 pandemic</p> Have a look CovidBoard: <a href="http://covid19infoboard.herokuapp.com/">Live Project Link</a>
-Video Link - <a href='https://www.youtube.com/watch?v=PgksCucm93o&t=51s'>Video Link</a><br/><br/>
+<p>Hey there <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"><br/><br/>CovidBoard is a dashboard system :computer: for getting information related to covid19 pandemic</p> Have a look CovidBoard: <a href="http://covid19infoboard.herokuapp.com/">Live Project Link</a> | <a href='https://www.youtube.com/watch?v=PgksCucm93o&t=51s'>Video Link</a><br/><br/>
 <p align="center">
 <img src="https://github.com/SanjeevYadavcr7/covid19Board/blob/main/covid.PNG" width="700px" height="380px" hspace="40">
 
